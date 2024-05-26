@@ -10,8 +10,8 @@ body {
 }
 
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
+	width: 100%;
+	max-width: 100%;
 	margin: 20px auto;
 	display: grid;
 	grid-gap: 20px;
@@ -39,6 +39,7 @@ body {
 	background: #12203E;
 	color: #fff;
 	grid-area: header;
+    text-align: center;
 }
 
 .contenedor .contenido {
@@ -79,4 +80,14 @@ body {
 	background: #12203E;
 	color: #fff;
 	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-2"
+						 "footer footer footer";
+	}
 }
