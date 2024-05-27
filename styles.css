@@ -1,120 +1,110 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background: white;
-	color: #000;
-	font-family: 'Roboto', sans-serif;
+    background: white;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .contenedor {
-	width: 100%;
-	max-width: 100%;
-	margin: 20px auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, auto);
-
-	grid-template-areas: "header header header"
-                          "contenido contenido sidebar "
-                          "widget-1 widget-2 sidebar"
-                          "footer footer footer"
-                        
+    flex: 1;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "header header header"
+        "contenido contenido sidebar"
+        "widget-1 widget-2 sidebar"
+        "footer footer footer";
 }
 
-.contenedor > div,
-.contenedor .header,
-.contenedor .contenido,
-.contenedor .sidebar
-.contenedor .footer {
-
-}
-
-.contenedor .header {
-	background: #40054e;
-	color: #fff;
-	grid-area: header;
+.header {
+    background: #40054e;
+    color: #fff;
+    grid-area: header;
     text-align: center;
+    padding: 1rem;
 }
 
-.contenedor .contenido {
-	grid-area: contenido;
+.contenido {
+    grid-area: contenido;
+    padding: 1rem;
 }
 
-.contenedor .sidebar {
-	grid-column: 3 / 4;
-	background:  #fff;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100px;
-	grid-area: sidebar;
-}
-
-
-.contenedor .widget-1{
-	
-	color: #fff;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.contenedor .widget-1 {
-	grid-area: widget-1;
-
-}
-
-.contenedor .widget-1  img{
-	min-width: 100%;
-    min-height: 100%;
-
-}
-
-.contenedor .widget-2 {
-	
-	color: #831212;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    background-color: white;
-   
-}
-
-
-
-.contenedor .widget-2 {
-	grid-area: widget-2;
-}
-
-.contenedor .footer {
-	background: #12203E;
-	color: #fff;
-	grid-area: footer;
-    display:flex;justify-content: center;
+.sidebar {
+    grid-column: 3 / 4;
+    background: #fff;
+    text-align: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+    padding: 1rem;
 }
 
-.contenedor .footer img{
+.widget-1 {
+    grid-area: widget-1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget-2 {
+    grid-area: widget-2;
+    color: #831212;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 1rem;
+}
+
+.footer {
+    background: #12203E;
+    color: #fff;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer img {
     width: 70px;
     height: 70px;
 }
 
-@media screen and (max-width: 768px){
-	.contenedor {
-		grid-template-areas: "header header header"
-						 "contenido contenido contenido"
-						 "sidebar sidebar sidebar"
-						 "widget-1 widget-1 widget-1"
-                         "widget-2 widget-2 widget-2"
-						 "footer footer footer";
-	}
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: 
+            "header header header"
+            "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2"
+            "footer footer footer";
+    }
 }
 
 .Navbar {
@@ -145,7 +135,6 @@ body {
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px;
     color: #daf10a;
-    
 }
 
 .Navbar li ul {
@@ -175,10 +164,14 @@ body {
 }
 
 .Navbar li li a:hover {
-    background: hsla(9, 22%, 18%, 0.542);; 
+    background: hsla(9, 22%, 18%, 0.542);
 }
 
 .contenedor img {
     width: 400px;
     height: 400px;
+}
+
+.trabajo {
+    text-align: center;
 }
