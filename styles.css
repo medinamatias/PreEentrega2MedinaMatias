@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background: white;
+    background: rgb(255, 255, 255);
     color: #000;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -174,4 +174,23 @@ body {
 
 .trabajo {
     text-align: center;
+}
+
+.oval-button {
+    background-color: #0d0e0d; 
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px; 
+    transition: background-color 0.3s ease;
+}
+
+.oval-button:hover {
+    background-color: #45a049; 
 }
