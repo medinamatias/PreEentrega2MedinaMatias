@@ -97,6 +97,16 @@ body {
 	background: #12203E;
 	color: #fff;
 	grid-area: footer;
+    display:flex;justify-content: center;
+    align-items: center;
+
+
+    
+}
+
+.contenedor .footer img{
+    width: 70px;
+    height: 70px;
 }
 
 @media screen and (max-width: 768px){
