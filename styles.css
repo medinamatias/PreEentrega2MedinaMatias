@@ -99,9 +99,6 @@ body {
 	grid-area: footer;
     display:flex;justify-content: center;
     align-items: center;
-
-
-    
 }
 
 .contenedor .footer img{
@@ -181,3 +178,7 @@ body {
     background: hsla(9, 22%, 18%, 0.542);; 
 }
 
+.contenedor img {
+    width: 400px;
+    height: 400px;
+}
